@@ -4,7 +4,7 @@ function App() {
 
   return (
       <>
-          <MyComponents/>
+          <MyComponents></MyComponents>
       </>
   )
 }
