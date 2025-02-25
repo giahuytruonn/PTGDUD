@@ -6,12 +6,28 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background-color: #AC1754;
   }
-  
+
+  .App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .student-app {
+    background-color: #E53888;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 400px;
+  }
+
   .todo-app {
-    background-color: white;
+    background-color:#E53888;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -30,16 +46,21 @@ body {
   button {
     padding: 10px 15px;
     margin-top: 10px;
-    border-radius: 4px;
+    border-radius: 10px;
     border: none;
-    background-color: blue;
-    color: white;
+    background-color: #FBF3B9;
+    color: black;
     cursor: pointer;
   }
   
-  button:hover {
-    background-color: blue ;
+  h1,h3 {
+    color: #F7A8C4;
   }
+
+  button:hover {
+    background-color: #B7B1F2 ;
+  }
+
   
   ul {
     list-style: none;

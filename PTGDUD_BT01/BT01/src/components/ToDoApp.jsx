@@ -67,11 +67,11 @@ const TodoApp = () => {
         type="text"
         value={input}
         onChange={(e) => setInput(e.target.value)}
-        placeholder="Add a new todo"
+        placeholder="Thêm vào công việc"
       />
-      <button onClick={handleAddTodo}>Add Todo</button>
+      <button onClick={handleAddTodo}>Thêm vào TODO List</button>
 
-      <h3>Incomplete Tasks</h3>
+      <h3>Chưa hoàn thành</h3>
       <ul>
         {filteredTodos.incomplete.map(todo => (
           <li key={todo.id}>
@@ -86,7 +86,7 @@ const TodoApp = () => {
         ))}
       </ul>
 
-      <h3>Completed Tasks</h3>
+      <h3>Công việc hoàn thành</h3>
       <ul>
         {filteredTodos.completed.map(todo => (
           <li key={todo.id}>
