@@ -1,11 +1,10 @@
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Form, Button, Navbar, Nav } from "react-bootstrap";
 
 function Header() {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg">
+    <Navbar style={{ backgroundColor: "#5d989e" }} variant="dark" expand="lg">
       <Container>
         <Navbar.Brand as={Link} to="/">
           Travel App

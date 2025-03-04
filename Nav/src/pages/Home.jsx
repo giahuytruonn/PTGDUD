@@ -1,14 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import {
-  Container,
-  Form,
-  Button,
-  Navbar,
-  Nav,
-  Carousel,
-  Row,
-  Col,
-} from "react-bootstrap";
+import { Container, Carousel, Row, Col } from "react-bootstrap";
 
 import CarouselImage from "../components/CarouselImage";
 import DestinationCard from "../components/CardDestination";
@@ -53,7 +44,7 @@ function Home() {
         </Carousel.Item>
       </Carousel>
 
-      <h1 className="text-center">KHÁM PHÁ CÁC ĐIỂM ĐẾN</h1>
+      <h1 className="text-center p-5">KHÁM PHÁ CÁC ĐIỂM ĐẾN</h1>
 
       <h2 className="mt-5">Điểm đến nội địa</h2>
 
