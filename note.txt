@@ -1,4 +1,0 @@
-đổi từ prop sang hook 
-gọi hàm ở phần render, phương thức return 
-
-trong function ko co state, ko co this, trả về một array
