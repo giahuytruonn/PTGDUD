@@ -1,6 +1,6 @@
 import { Container, Row, Col, Card } from "react-bootstrap";
 
-function About() {
+function Collection() {
   return (
     <Container className="mt-5 text-center" style={{ height: "740px" }}>
       <h1>Về Chúng Tôi</h1>
@@ -37,4 +37,4 @@ function About() {
   );
 }
 
-export default About;
+export default Collection;

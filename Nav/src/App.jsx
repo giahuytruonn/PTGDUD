@@ -7,8 +7,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
+import Collection from "./pages/Collection";
 import Login from "./pages/Login";
 import Membership from "./pages/Membeship";
 
@@ -18,8 +17,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/membership" element={<Membership />} /> 
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/membership" element={<Membership />} />
+        <Route path="/collection" element={<Collection />} />
         <Route path="/login" element={<Login />} />
       </Routes>
       <Footer />

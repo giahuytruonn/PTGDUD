@@ -8,6 +8,8 @@ import {
   ButtonGroup,
 } from "react-bootstrap";
 
+import React, { useState } from "react";
+
 import CarouselImage from "../components/CarouselImage";
 import DestinationCard from "../components/CardDestination";
 import "../index.css";
@@ -66,7 +68,14 @@ function Home() {
             </p>
           </div>
           <ButtonGroup style={{ width: "250px" }}>
-            <button id="btn_HomeLogin">Login</button>
+            <button
+              id="btn_HomeLogin"
+              className="btn btn-dark rounded-pill px-4 py-2 fs-5"
+              data-bs-toggle="modal"
+              data-bs-target="#loginModal"
+            >
+              Login
+            </button>
           </ButtonGroup>
         </div>
 
