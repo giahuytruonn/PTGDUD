@@ -1,33 +1,40 @@
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Form, Button, Navbar, Nav } from "react-bootstrap";
+import "bootstrap/dist/js/bootstrap.bundle.min";
+import { Container, Navbar, Nav } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
+import Login from "../pages/Login";
 
 function Header() {
   return (
-    <Navbar style={{ backgroundColor: "#5d989e" }} variant="dark" expand="lg">
-      <Container>
-        <Navbar.Brand as={Link} to="/">
-          Travel App
+    <>
+    <Navbar style={{ backgroundColor: "#f8f7f2" }} expand="lg" className="py-3">
+      <Container className="d-flex justify-content-between">
+        {/* Logo */}
+        <Navbar.Brand as={Link} to="/" className="fs-2 fw-bold text-dark">
+          ASMALLWORLD
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link as={Link} to="/">
-              Home
-            </Nav.Link>
-            <Nav.Link as={Link} to="/about">
-              About
-            </Nav.Link>
-            <Nav.Link as={Link} to="/contact">
-              Contact
-            </Nav.Link>
-            <Nav.Link as={Link} to="/login">
-              Login
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
+
+        {/* Nav Links */}
+        <Nav className="me-auto d-flex gap-4">
+          <Nav.Link as={Link} to="/" className="fs-5 text-dark">
+            COLLECTION
+          </Nav.Link>
+          <Nav.Link as={Link} to="/events" className="fs-5 text-dark">
+            EVENTS
+          </Nav.Link>
+          <Nav.Link as={Link} to="/membership" className="fs-5 text-dark">
+            MEMBERSHIP
+          </Nav.Link>
+        </Nav>
+
+        {/* Buttons */}
+        <div className="d-flex gap-3">
+            <Login/>
+        </div>
       </Container>
     </Navbar>
+    </>
   );
 }
 

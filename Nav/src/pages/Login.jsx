@@ -1,63 +1,92 @@
-import { InputGroup, Form, Container, Card, Button } from "react-bootstrap";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
+import "../styles/Login.css"; // Import CSS mới
 
-function Login() {
-  const [username, setUsername] = useState("");
+const Login = () => {
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert(`Logging in with Username: ${username}`);
+  const handleLogin = () => {
+    if (!email || !password) {
+      setError("Please enter your email and password!");
+    } else {
+      setError("");
+      console.log("Logging in with:", { email, password });
+    }
   };
 
+    useEffect(() => {
+      const modal = document.getElementById("loginModal");
+
+      const handleModalClose = () => {
+        setEmail("");
+        setPassword("");
+        setError("");
+      };
+
+      modal.addEventListener("hidden.bs.modal", handleModalClose);
+
+      return () => {
+        modal.removeEventListener("hidden.bs.modal", handleModalClose);
+      };
+    }, []);
+
   return (
-    <Container
-      fluid
-      className="justify-content-center align-items-center d-flex"
-      style={{ height: "785px" }}
-    >
-      <Card className="p-5 shadow">
-        <Card.Title className="text-center">
-          <h1>Đăng nhập</h1>
-        </Card.Title>
-        <Card.Body>
-          <Form onSubmit={handleSubmit}>
-            <InputGroup className="p-2">
-              <InputGroup.Text>Tài khoản</InputGroup.Text>
-              <Form.Control
-                placeholder="Nhập tài khoản..."
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-              />
-            </InputGroup>
-            <InputGroup className="p-2">
-              <InputGroup.Text>Mật khẩu</InputGroup.Text>
-              <Form.Control
-                type="password"
-                placeholder="Nhập mật khẩu..."
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-            </InputGroup>
-            <Button
-              className="text-center w-100 mt-3"
-              style={{ backgroundColor: "#387c24", borderColor: "#387c24" }}
-              type="submit"
-            >
-              Đăng nhập
-            </Button>
-            <span style={{ color: "blue" }}>
-              <a style={{ fontSize: "14px" }} href="#">
-                Quên mật khẩu?
-              </a>
-            </span>
-          </Form>
-        </Card.Body>
-      </Card>
-    </Container>
+    <>
+      {/* Button mở modal */}
+      <button className="btn btn-dark rounded-pill px-4 py-2 fs-5" data-bs-toggle="modal" data-bs-target="#loginModal">
+        Login
+      </button>
+
+      {/* Modal Component */}
+      <div className="modal fade" id="loginModal" tabIndex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title text-center" id="loginModalLabel">Login</h5>
+              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div className="modal-body">
+              <form>
+                <div className="mb-3">
+                  <label htmlFor="emailInput" className="form-label">Email</label>
+                  <input
+                    type="email"
+                    id="emailInput"
+                    className="form-control"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </div>
+
+                <div className="mb-3">
+                  <label htmlFor="passwordInput" className="form-label">Password</label>
+                  <input
+                    type="password"
+                    id="passwordInput"
+                    className="form-control"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+                </div>
+
+                {error && <p className="text-danger">{error}</p>}
+
+                <button type="button" className="btn btn-primary w-100" onClick={handleLogin}>
+                  Login
+                </button>
+              </form>
+            </div>
+            <div className="modal-footer">
+              <p>Forgot <a href="#">Login details?</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
-}
+};
 
 export default Login;
