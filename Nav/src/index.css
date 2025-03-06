@@ -1,0 +1,23 @@
+#btn_HomeLogin {
+  border-radius: 25px;
+  background-color: #0d2937;
+  border-color: #0d2937;
+  color: white;
+  width: 250px;
+  height: 50px;
+}
+
+#btn_HomeLogin:hover {
+  border-color: #f5784c;
+  background-color: #f5784c;
+}
+
+#home-card,
+#home-member-benefit {
+  transition: transform 0.3s ease;
+}
+
+#home-card:hover,
+#home-member-benefit:hover {
+  transform: translateY(-10px);
+}
