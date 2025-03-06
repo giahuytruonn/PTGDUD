@@ -1,0 +1,115 @@
+/* Định dạng phần nền */
+.membership-container {
+    background-image: url('https://dv4xo43u9eo19.cloudfront.net/assets/membership/hero-1915c034a88a374db0cee240370233dfdb906e9f0d40751929d677c308b26e0e.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 120px 0;
+    text-align: center;
+    color: white;
+  }
+  
+  /* Tiêu đề chính */
+  .membership-title {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  
+  /* Card gói thành viên */
+  .membership-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    max-height: 700px;
+  }
+  
+  .membership-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  /* Tiêu đề gói */
+  .membership-card h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color:black
+  }
+  
+  /* Mô tả gói */
+  .membership-description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  /* Danh sách lợi ích */
+  .membership-card ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .membership-card li {
+    font-size: 14px;
+    text-align: left;
+    padding: 5px 0;
+    color: black;
+    margin-bottom: 10px;
+  }
+  
+  /* Giá */
+  .membership-price {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 20px 0;
+  }
+  
+  /* Nút chọn gói */
+  .membership-button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .membership-button:hover {
+    background-color: #333;
+  }
+
+  /* Card gói thành viên */
+.membership-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Hover đổi màu nền thành gradient */
+.membership-card:hover {
+    transform: translateY(-10px);
+    background: linear-gradient(to right, #4C6B99, #37557D);
+    color: white; /* Đổi màu chữ để dễ đọc trên nền tối */
+}
+
+/* Hover đổi màu chữ cho các phần tử con */
+.membership-card:hover h3,
+.membership-card:hover li,
+.membership-card:hover p,
+.membership-card:hover .membership-price {
+    color: white;
+}
+
+/* Hover đổi màu nền nút */
+.membership-card:hover .membership-button {
+    background-color: white;
+    color: black;
+}
+
+  
