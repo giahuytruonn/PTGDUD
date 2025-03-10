@@ -1,0 +1,33 @@
+#card-phone,
+#product-phone {
+  transition: transform 0.2s ease-in-out;
+}
+
+#card-phone:hover,
+#product-phone:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  font-family: "Arial", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #ee4d2d;
+}
