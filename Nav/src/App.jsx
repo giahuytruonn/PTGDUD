@@ -27,7 +27,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/events/:id" element={<EventDetail/>}></Route>
       </Routes>
-      <Footer />
+      <Footer/>
     </Router>
   );
 }

@@ -19,7 +19,7 @@ const EventDetail = () => {
   }
 
   return (
-    <Container className="mt-4">
+    <Container className="mt-4 my-3">
       <Row>
         <Col md={8}>
           <Carousel>
@@ -49,18 +49,25 @@ const EventDetail = () => {
             </Carousel.Item>
           </Carousel>
 
-          <Card className="mt-3 p-3 d-flex">
-            <div className="col-6">
-              <h2>{event.name}</h2>
-              <p>{event.review}</p>
-              <img
-                style={{ height: "167px", width: "167px" }}
-                src="https://dv4xo43u9eo19.cloudfront.net/assets/asw_logo-60a88b85d6463eaacca2dee3b30ef0889274a5c6dc61e296a3fe91dcc381cc6a.jpg"
-              ></img>
-              <p className="text-primary fw-bold mx-3">ASW Events Team</p>
+          <Card className="mt-3 p-3">
+            <div className="d-flex">
+              <div className="col-6">
+                <h2>{event.name}</h2>
+                <p className="fw-bold">{event.review}</p>
+                <img
+                  style={{ height: "167px", width: "167px" }}
+                  src="https://dv4xo43u9eo19.cloudfront.net/assets/asw_logo-60a88b85d6463eaacca2dee3b30ef0889274a5c6dc61e296a3fe91dcc381cc6a.jpg"
+                ></img>
+                <p className="text-primary fw-bold mx-3">ASW Events Team</p>
+              </div>
+              <div className="col-6 mx-3">
+                <p style={{ whiteSpace: "pre-line" }}>
+                  {event.description}
+                </p>
+              </div>
             </div>
-            <div className="col-6">
-                {event.description}
+            <div className="text-white bg-black text-center align-content-center rounded my-3" style={{height:"100px",fontSize:"30px"}}>
+              <span className="text-warning">Create free account</span> or <span className="text-warning">Login</span> to see who is attending!
             </div>
           </Card>
         </Col>

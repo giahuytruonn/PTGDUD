@@ -37,7 +37,7 @@ const Events = () => {
                     className="position-absolute fs-4 rounded-pill text-white px-5 py-2 more-details"
                     style={{ bottom: "20px", right: "20px" }}
                   >
-                    <Link to={`/events/${item.id}`}>MORE DETAILS</Link>
+                    <Link style={{textDecoration:'none',color:'white'}} to={`/events/${item.id}`}>MORE DETAILS</Link>
                   </button>
                 </li>
               ))}
