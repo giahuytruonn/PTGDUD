@@ -1,4 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import Login from "./Login";
 import {
   Container,
   Carousel,
@@ -16,7 +17,7 @@ import "../index.css";
 
 function Home() {
   return (
-    <div style={{ backgroundColor: "#f3f2ee" }}>
+    <div style={{ backgroundColor: "#f3f2ee" , marginBottom:50}}>
       <Carousel>
         <Carousel.Item>
           <CarouselImage src="/src/img/hcm.png" text="First slide" />
@@ -76,6 +77,7 @@ function Home() {
             >
               Login
             </button>
+            <Login/>
           </ButtonGroup>
         </div>
 

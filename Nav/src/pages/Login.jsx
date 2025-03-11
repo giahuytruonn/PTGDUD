@@ -35,15 +35,6 @@ const Login = () => {
 
   return (
     <>
-      {/* Button mở modal */}
-      <button
-        className="btn btn-dark rounded-pill px-4 py-2 fs-5"
-        data-bs-toggle="modal"
-        data-bs-target="#loginModal"
-      >
-        Login
-      </button>
-
       {/* Modal Component */}
       <div
         className="modal fade"

@@ -23,7 +23,7 @@
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
-    max-height: 700px;
+    max-height: 800px;
   }
   
   .membership-card:hover {
@@ -88,11 +88,12 @@
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, background 0.3s ease;
+    transition: transform 1s ease, background 1s ease;
+    cursor: pointer;
 }
 
 /* Hover đổi màu nền thành gradient */
-.membership-card:hover {
+.membership-card:hover {  
     transform: translateY(-10px);
     background: linear-gradient(to right, #4C6B99, #37557D);
     color: white; /* Đổi màu chữ để dễ đọc trên nền tối */
@@ -106,10 +107,3 @@
     color: white;
 }
 
-/* Hover đổi màu nền nút */
-.membership-card:hover .membership-button {
-    background-color: white;
-    color: black;
-}
-
-  

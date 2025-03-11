@@ -32,12 +32,16 @@ function Header() {
             </Nav.Link>
           </Nav>
 
-          {/* Buttons */}
-          <div className="d-flex gap-3">
-            <Login />
-          </div>
-        </Container>
-      </Navbar>
+        {/* Buttons */}
+        <div className="d-flex gap-3">
+        {/* Button mở modal */}
+        <button className="btn btn-dark rounded-pill px-4 py-2 fs-5" data-bs-toggle="modal" data-bs-target="#loginModal">
+          Login
+        </button>
+            <Login/>
+        </div>
+      </Container>
+    </Navbar>
     </>
   );
 }
