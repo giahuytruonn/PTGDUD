@@ -51,5 +51,26 @@ const interest = () =>{
     ]
 }
 
+const eventdetail = () =>{
+    return [
+        {
+            id:1,
+            location:"TOTÓ Restaurant, Sheikh Mohammed Bin Rashid Boulevard, Dubai", 
+            attendees:80, name:'Aperi at Totó - Dubai', 
+            review:'Step into the golden era of Italian cinema and experience a night of elegance at TOTÓ, a tribute to the timeless charm of Italian-Mediterranean cuisine in the heart of Dubai.',
+            description: `ASMALLWORLD invites members and their guests to join Ambassador Kristina Suchan for an exquisite evening at TOTÓ Dubai.
+    
+    From 6 PM to 8 PM, enjoy the exclusive "Aperi Totó," where selected mocktails, cocktails, and a curated selection of canapés will be offered at 50 AED per drink. After 8 PM, guests may continue to indulge at standard à la carte prices.
 
-export {event,city, capital, interest}
+    Set in a sophisticated yet cozy atmosphere, TOTÓ is the perfect setting to connect with fellow members over exceptional cuisine and handcrafted drinks.
+
+    Don't miss this chance to immerse yourself in the essence of Italy, right in the heart of Dubai.`,
+            image1:'https://d11vyokdyewbcr.cloudfront.net/2841741_xlarge_cd2aab0b.jpg',
+            image2:'https://d11vyokdyewbcr.cloudfront.net/2844705_xlarge_825c24f5.jpg',
+            image3:'https://d20jhx4r9t6zw8.cloudfront.net/2844708_xlarge_5d7d6383.jpg'
+}
+    ]
+}
+
+
+export {event,city, capital, interest,eventdetail}

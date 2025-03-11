@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import "/src/index.css";
+import EventDetail from "./pages/EventDetail"
 
 
 import Header from "./components/Header";
@@ -24,6 +25,7 @@ function App() {
         <Route path="/collection" element={<Collection />} />
         <Route path="/events" element={<Event />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/events/:id" element={<EventDetail/>}></Route>
       </Routes>
       <Footer />
     </Router>

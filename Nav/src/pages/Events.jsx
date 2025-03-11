@@ -1,14 +1,18 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { event, city, capital , interest} from "../assets/data.js";
+import { event, city, capital, interest } from "../assets/data.js";
 import SearchIcon from "@mui/icons-material/Search";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import "../styles/Events.css";
+import { Link, useNavigate } from "react-router-dom";
+
 const Events = () => {
   const events = event();
   const citys = city();
   const capitals = capital();
-  const interests = interest(); 
+  const interests = interest();
+  const navigate = useNavigate();
+
   return (
     <div className="pt-5" style={{ backgroundColor: "#f8f7f2" }}>
       <div className="container-fluid" style={{ marginLeft: "50px" }}>
@@ -29,8 +33,11 @@ const Events = () => {
                     width: "1000px",
                   }}
                 >
-                  <button className="position-absolute fs-4 rounded-pill text-white px-5 py-2 more-details" style={{bottom:"20px", right:"20px"}}>
-                    MORE DETAILS
+                  <button
+                    className="position-absolute fs-4 rounded-pill text-white px-5 py-2 more-details"
+                    style={{ bottom: "20px", right: "20px" }}
+                  >
+                    <Link to={`/events/${item.id}`}>MORE DETAILS</Link>
                   </button>
                 </li>
               ))}
@@ -38,7 +45,7 @@ const Events = () => {
           </div>
           <div
             className="border border-2 rounded bg-white"
-            style={{ marginLeft: "30px", width: "316px" ,height:"600px"}}
+            style={{ marginLeft: "30px", width: "316px", height: "600px" }}
           >
             <div className="p-2" style={{ width: "310px" }}>
               <h5 style={{ borderBottom: "2px solid orange" }}>
@@ -128,7 +135,7 @@ const Events = () => {
                     {interests.map((item) => (
                       <div className="d-flex mb-3" key={item.id}>
                         <input type="checkbox"></input>
-                        <item.icon className="mx-2"/>
+                        <item.icon className="mx-2" />
                         <div>{item.name}</div>
                       </div>
                     ))}
