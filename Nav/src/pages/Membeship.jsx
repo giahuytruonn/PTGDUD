@@ -10,7 +10,7 @@ export default function MembershipOptions() {
         <div className="row justify-content-center">
           {/* Premium */}
           <div className="col-md-4">
-            <div className="membership-card">
+            <div className="membership-card h-100">
               <h3 className="membership-title fs-3 fw-bold">Premium</h3>
               <p className="membership-description">
                 Enjoy an enhanced ASMALLWORLD experience
@@ -24,7 +24,7 @@ export default function MembershipOptions() {
                 <li><CheckCircleOutlineIcon/> Create marketplace listings</li>
               </ul>
               <h4 className="membership-price">€79/YEAR</h4>
-              <button className="membership-button">SELECT MEMBERSHIP</button>
+              <button className="membership-button" style={{ marginTop: "65px" }}>SELECT MEMBERSHIP</button>
             </div>
           </div>
 

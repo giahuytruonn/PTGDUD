@@ -1,0 +1,19 @@
+.dropdown-arrow2,
+.dropdown-arrow {
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 5px;
+}
+
+/* Khi nút được mở (sử dụng Bootstrap class .collapsed) */
+.btn-no-outline[aria-expanded="true"] .dropdown-arrow2,
+.btn-no-outline[aria-expanded="true"] .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.more-details{
+    background-color: orange;
+}
+
+.more-details:hover{
+    background-color: black;
+}
